@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    background: #333333;
+}
+
+.title{
+    z-index: 2;
+    color: #333333;
+    position: fixed;
+    background: transparent;
+    font-size: clamp(30px, 5vw, 50px);
+    font-weight: bold;
+    width: 100vw;
+    height: 100vh;
+}
+
+svg{
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cls-31{
+    fill: #ff7bac;
+    -webkit-animation: fill-change 3s ease-in infinite;
+            animation: fill-change 3s ease-in infinite;
+    opacity: 66%;
+}
+
+
+@-webkit-keyframes fill-change {
+    0% {
+    fill: #ff7bac;
+    }
+    25%{
+    fill: aqua;
+    }
+    50%{
+    fill: #ff7bac;
+    }
+    75%{
+    fill: aqua;
+    }
+}
+
+@keyframes fill-change {
+    0% {
+    fill: #ff7bac;
+    }
+    25%{
+    fill: aqua;
+    }
+    50%{
+    fill: #ff7bac;
+    }
+    75%{
+    fill: aqua;
+    }
+}
+
+.cls-32{
+    fill: #29abe2;
+    -webkit-animation: fill-change-2 5s ease-in-out infinite;
+            animation: fill-change-2 5s ease-in-out infinite;
+}
+
+
+@-webkit-keyframes fill-change-2 {
+    from{
+    fill: #29abe2;
+    }
+    80%{
+    fill: green;
+    }
+    to{
+    fill: #29abe2;
+    }
+}
+
+@keyframes fill-change-2 {
+    from{
+    fill: #29abe2;
+    }
+    80%{
+    fill: green;
+    }
+    to{
+    fill: #29abe2;
+    }
+}
+
+.cls-33{
+    fill: #e4e4e4;
+    -webkit-animation: fill-change-3 3s ease-in-out infinite;
+            animation: fill-change-3 3s ease-in-out infinite;
+}
+
+
+@-webkit-keyframes fill-change-3 {
+    from{
+    opacity: 1;
+    }
+    80%{
+    opacity: .4;
+    }
+    to{
+    opacity: 1;
+    }
+}
+
+@keyframes fill-change-3 {
+    from{
+    opacity: 1;
+    }
+    80%{
+    opacity: .4;
+    }
+    to{
+    opacity: 1;
+    }
+}
+
+.cls-41{
+    fill: orange;
+    opacity: 0.5;
+}
+
+@media (max-width:768px){
+    svg{
+        transform: rotate(-90deg);
+    }
+}
