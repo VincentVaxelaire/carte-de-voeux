@@ -2,8 +2,8 @@
 if(isset($_POST['mailform'])){
     if(!empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['message']) AND !empty($_POST['nomdest'])){
         $header="MIME-Version: 1.0\r\n";
-        $header.="From:'https://vincentv.promo-45.codeur.online/cartedevoeux/'\r\n";
-        $header.="Content-Type: text/html; charset='utf-8'\r\n";
+        $header.="From: https://vincentv.promo-45.codeur.online/cartedevoeux/\r\n";
+        $header.="Content-Type: text/html; charset=utf-8\r\n";
         $header.="Content-Transfer-Encoding: 8bit\r\n";
 
         $message='
@@ -81,7 +81,7 @@ if(isset($_POST['mailform'])){
         <!--BANNER IMAGE -->
                     <tr>
                         <td>
-                            <img src="https://vincentv.promo-45.codeur.online/cartedevoeux/choco.jpg" alt="bannière" width="600" style="max-width: 100%;">
+                            <img src="https://vincentv.promo-45.codeur.online/carte-de-voeux/choco.jpg" alt="bannière" width="600" style="max-width: 100%;">
                         </td>
                     </tr>
 
@@ -96,7 +96,7 @@ if(isset($_POST['mailform'])){
                                             <p style="font-size: 18px; line-height: 24px; padding-bottom: 30px;">
                                             '.nl2br($_POST["message"]).' . Clique sur ce beau bouton pour voir une belle carte de voeux !
                                             </p>
-                                            <a href="https://vincentv.promo-45.codeur.online/cartedevoeux/carte.php?d='.$_POST['nomdest'].'" class="button"><strong style="color: #e4e4e4;font-size: 24px">Ce beau bouton</strong></a>
+                                            <a href="https://vincentv.promo-45.codeur.online/carte-de-voeux/carte.php?d='.$_POST['nomdest'].'" class="button"><strong style="color: #e4e4e4;font-size: 24px">Ce beau bouton</strong></a>
                                         </td>
                                     </td>
                                 </tr>
