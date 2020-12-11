@@ -2,7 +2,7 @@
 if(isset($_POST['mailform'])){
     if(!empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['message']) AND !empty($_POST['nomdest'])){
         $header="MIME-Version: 1.0\r\n";
-        $header.="From: https://vincentv.promo-45.codeur.online/cartedevoeux/\r\n";
+        $header.="From: https://vincentv.promo-45.codeur.online/carte-de-voeux/\r\n";
         $header.="Content-Type: text/html; charset=utf-8\r\n";
         $header.="Content-Transfer-Encoding: 8bit\r\n";
 
@@ -34,7 +34,6 @@ if(isset($_POST['mailform'])){
             .wrapper{
                 width: 100%;
                 table-layout: fixed;
-                background-color: #333333;
                 padding-bottom: 40px;
             }
             .main{
@@ -43,23 +42,31 @@ if(isset($_POST['mailform'])){
                 max-width: 600px;
                 border-spacing: 0;
                 font-family: sans-serif;
-                color: #e4e4e4;
-                background-color: #333333;
+                color: #dd3c3c;
+                background-color: #e4e4e4;
                 height: 100vh;
             }
             .button{
-                background-color: rgb(209, 68, 68);
-                color: #e4e4e4;
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                border-radius: 20px;
+                border: none;
+                border-bottom: 4px solid #8f2020;
+                background: #dd3c3c; 
+                font-size: 16px;
+                font-weight: 400;
+                color: #fff;
                 text-decoration: none;
-                padding: 12px 20px;
-                border-radius: 5px;
-                font-weight: bold;
+            }
+            .button:hover {
+                background: #8f2020;
             }
         </style>
         </head>
         <body>
 
-            <center class="weapper">
+            <center class="wrapper">
 
                 <table class="main" width="100%">
 
@@ -94,9 +101,9 @@ if(isset($_POST['mailform'])){
                                     <td>
                                         <td style="text-align: center;padding: 45px;">
                                             <p style="font-size: 18px; line-height: 24px; padding-bottom: 30px;">
-                                            '.nl2br($_POST["message"]).' . Clique sur ce beau bouton pour voir une belle carte de voeux !
+                                            '.nl2br($_POST["message"]).'. <br><br>Clique sur ce beau bouton pour voir une belle carte de voeux !
                                             </p>
-                                            <a href="https://vincentv.promo-45.codeur.online/carte-de-voeux/carte.php?d='.$_POST['nomdest'].'" class="button"><strong style="color: #e4e4e4;font-size: 24px">Ce beau bouton</strong></a>
+                                            <a href="https://vincentv.promo-45.codeur.online/carte-de-voeux/carte.php?d='.$_POST['nomdest'].'" class="button"><strong style="color: #e4e4e4;font-size: 18px">Ce beau bouton</strong></a>
                                         </td>
                                     </td>
                                 </tr>
@@ -141,21 +148,27 @@ if(isset($_POST['mailform'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Ma carte de voeux</title>
 </head>
 <body>
-    <h2>Envoyer une carte de voeux.</h2>
-    <form action="" method="POST">
-        <input type="text" name="nom" placeholder="Votre prénom + nom" value="<?php if(isset($_POST['nom'])) {echo $_POST['nom'];} ?>">
-        <input type="text" name="nomdest" placeholder="Le prénom du destinataire" value="<?php if(isset($_POST['nomdest'])) {echo $_POST['nomdest'];} ?>"><br><br>
-        <input type="email" name="mail" placeholder="L'adresse e-mail du destinataire" value="<?php if(isset($_POST['mail'])) {echo $_POST['mail'];} ?>"><br><br>
-        <textarea name="message" placeholder="Votre message personnalisé"><?php if(isset($_POST['message'])) {echo $_POST['message'];} ?></textarea><br><br>
-        <input type="submit" value="Envoyer !" name="mailform">
+<h1>Ecrire une carte de voeux</h1>
+<p>Grace à ce petit formulaire vous pourrez envoyer une carte de voeux à l'un de vos proche. Prennez le temps de lui écrire un petit mot, nous nous chargeront du reste !</p>
+    <form action="" class="decor" method="POST">
+        <div class="form-left-decoration"></div>
+        <div class="form-right-decoration"></div>
+        <div class="circle"></div>
+            <div class="form-inner">
+                <input type="text" name="nom" placeholder="Votre prénom + nom" value="<?php if(isset($_POST['nom'])) {echo $_POST['nom'];} ?>">
+                <input type="text" name="nomdest" placeholder="Le prénom du destinataire" value="<?php if(isset($_POST['nomdest'])) {echo $_POST['nomdest'];} ?>"><br><br>
+                <input type="email" name="mail" placeholder="L'adresse e-mail du destinataire" value="<?php if(isset($_POST['mail'])) {echo $_POST['mail'];} ?>"><br><br>
+                <textarea name="message" placeholder="Votre message personnalisé"><?php if(isset($_POST['message'])) {echo $_POST['message'];} ?></textarea><br><br>
+                <?php 
+                    if(isset($msg)){
+                        echo $msg;
+                    }
+                ?>
+                <input class="button" type="submit" value="Envoyer !" name="mailform">
+            </div>
     </form>
-    <?php 
-    if(isset($msg)){
-        echo $msg;
-    }
-    ?>
 </body>
 </html>
