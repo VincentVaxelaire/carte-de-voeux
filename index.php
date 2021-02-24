@@ -136,8 +136,8 @@ $message_html ='
 
 $message_txt = strip_tags($message_html);
 
-$headers = "From: \"Vincent Vaxelaire\"<votre-carte-de-voeux@acs.fr>" . $passage_ligne;
-$headers.= "Reply-to: \"Vincent Vaxelaire\"<votre-carte-de-voeux@acs.fr>" . $passage_ligne;
+$headers = "From: \"Ma carte de voeux\"<support@vincentvaxelaire.fr>" . $passage_ligne;
+$headers.= "Reply-to: \"Vincent Vaxelaire\"<support@vincentvaxelaire.fr>" . $passage_ligne;
 $headers.= "MIME-Version: 1.0" . $passage_ligne;
 $headers.= "Content-Type: multipart/alternative;" . $passage_ligne . " boundary=\"" . $boundary . "\"" . $passage_ligne;
 $message = $passage_ligne . $boundary . $passage_ligne;
