@@ -91,7 +91,7 @@ $message_html ='
 <!--BANNER IMAGE -->
             <tr>
                 <td>
-                    <img src="http://iwxxzyj.cluster030.hosting.ovh.net/carte-voeux/choco.jpg" alt="bannière" width="600" style="max-width: 100%;">
+                    <img src="https://vincentvaxelaire.fr/carte-voeux/choco.jpg" alt="bannière" width="600" style="max-width: 100%;">
                 </td>
             </tr>
 
@@ -106,7 +106,7 @@ $message_html ='
                                     <p style="font-size: 18px; line-height: 24px; padding-bottom: 30px;">
                                     '.nl2br($_POST["message"]).'. <br><br>Clique sur ce beau bouton pour voir une belle carte de voeux !
                                     </p>
-                                    <a href="http://iwxxzyj.cluster030.hosting.ovh.net/carte-voeux/carte.php?d='.$_POST['nomdest'].'" class="button"><strong style="color: #e4e4e4;font-size: 18px">Ce beau bouton</strong></a>
+                                    <a href="https://vincentvaxelaire.fr/carte-voeux/carte.php?d='.$_POST['nomdest'].'" class="button"><strong style="color: #e4e4e4;font-size: 18px">Ce beau bouton</strong></a>
                                 </td>
                             </td>
                         </tr>

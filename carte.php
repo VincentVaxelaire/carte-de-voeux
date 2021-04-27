@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="button">
-        <a href="http://iwxxzyj.cluster030.hosting.ovh.net/carte-voeux/">Envie d'envoyer une carte de voeux ?</a>
+        <a href="https://vincentvaxelaire.fr/carte-voeux/">Envie d'envoyer une carte de voeux ?</a>
     </div>
     <div class="title">
         <p class="title">Joyeuses fêtes de fin d'année <?php echo $_GET['d'] ?>.</p>
